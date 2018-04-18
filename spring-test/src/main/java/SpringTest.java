@@ -6,6 +6,7 @@ public class SpringTest {
 				"application-common.xml",
 				"application-beans.xml",
 				"application-jdbc.xml");
+		//test dev  branch
 		Object object = context.getBean("member");
 	}
 }
