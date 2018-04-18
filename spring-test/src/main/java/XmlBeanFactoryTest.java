@@ -24,5 +24,6 @@ public class XmlBeanFactoryTest {
 		reader.loadBeanDefinitions(resource);
 
 
+
 	}
 }
