@@ -23,7 +23,7 @@ public class XmlBeanFactoryTest {
 		// 完成后 Bean 就成功的放置到 IOC 容器当中，以后我们就可以从中取得 Bean 来使用
 		reader.loadBeanDefinitions(resource);
 
-
+		//测试ssh
 
 	}
 }
