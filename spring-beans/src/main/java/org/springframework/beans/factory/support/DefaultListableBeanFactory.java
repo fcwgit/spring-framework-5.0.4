@@ -866,7 +866,9 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 			this.frozenBeanDefinitionNames = null;
 		}
 
+		//检查是否有同名的 BeanDefinition 已经在 IOC 容器中注册
 		if (oldBeanDefinition != null || containsSingleton(beanName)) {
+			//重置所有已经注册过的 BeanDefinition 的缓存
 			resetBeanDefinition(beanName);
 		}
 	}

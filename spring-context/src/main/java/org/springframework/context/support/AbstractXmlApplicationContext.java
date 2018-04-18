@@ -129,12 +129,14 @@ public abstract class AbstractXmlApplicationContext extends AbstractRefreshableC
 	//xml Bean读取器加载Bean定义资源
 	protected void loadBeanDefinitions(XmlBeanDefinitionReader reader) throws BeansException, IOException {
 		//获取Bean定义资源的定位
+		//使用ClassPathXmlApplicationContext启动Spring，则configResources != null
 		Resource[] configResources = getConfigResources();
 		if (configResources != null) {
 			//xml Bean读取器调用其父类AbstractBeanDefinitionReader读取定位的Bean定义资源
 			reader.loadBeanDefinitions(configResources);
 		}
 		//如果子类中获取的Bean定义资源定位为空，则获取FileSystemXmlApplicationContext构造方法中getConfigLocations
+		//使用FileSystemXmlApplicationContext启动Spring，则configLocations != null
 		String[] configLocations = getConfigLocations();
 		if (configLocations != null) {
 			//xml Bean读取器调用其父类AbstractBeanDefinitionReader读取定位
